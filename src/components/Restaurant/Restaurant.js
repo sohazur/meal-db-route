@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Button, FormControl, InputGroup } from "react-bootstrap";
+import {
+  Button,
+  Col,
+  Container,
+  FormControl,
+  InputGroup,
+  Row,
+} from "react-bootstrap";
 import Meal from "../Meal/Meal";
 
 const Restaurant = () => {
@@ -29,14 +36,20 @@ const Restaurant = () => {
         </Button>
       </InputGroup>
 
-      <div>
-        {meals.map((meal) => (
-          <Meal
-            key={parseInt(meal.idMeal) * Math.random(10)}
-            meal={meal}
-          ></Meal>
-        ))}
-      </div>
+      <Container>
+        <Row>
+          {meals.map((meal) => (
+            <Col
+              xs={12}
+              md={6}
+              lg={4}
+              key={parseInt(meal.idMeal) * Math.random(10)}
+            >
+              <Meal meal={meal}></Meal>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 };
