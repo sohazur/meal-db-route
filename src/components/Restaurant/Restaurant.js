@@ -17,7 +17,6 @@ const Restaurant = () => {
       .then((res) => res.json())
       .then((data) => setMeals(data.meals));
   }, [searchText]);
-  console.log(meals);
   const handleChange = (e) => {
     const searchTextValue = e.target.value;
     setSearchText(searchTextValue);
@@ -40,9 +39,11 @@ const Restaurant = () => {
         <Row>
           {meals.map((meal) => (
             <Col
+              className="g-4"
               xs={12}
               md={6}
               lg={4}
+              g={3}
               key={parseInt(meal.idMeal) * Math.random(10)}
             >
               <Meal meal={meal}></Meal>
