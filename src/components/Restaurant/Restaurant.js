@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Button, FormControl, InputGroup } from "react-bootstrap";
 import Meal from "../Meal/Meal";
 
 const Restaurant = () => {
@@ -16,7 +17,18 @@ const Restaurant = () => {
   };
   return (
     <div>
-      <input onChange={handleChange} type="search" name="" id="" />
+      <InputGroup className="mb-3">
+        <FormControl
+          onChange={handleChange}
+          placeholder="Search Food"
+          aria-label="Search Food"
+          aria-describedby="basic-addon2"
+        />
+        <Button variant="outline-secondary" id="button-addon2">
+          Search
+        </Button>
+      </InputGroup>
+
       <div>
         {meals.map((meal) => (
           <Meal
