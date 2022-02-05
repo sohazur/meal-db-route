@@ -21,6 +21,7 @@ const Restaurant = () => {
     const searchTextValue = e.target.value;
     setSearchText(searchTextValue);
   };
+  console.log(meals);
   return (
     <div>
       <InputGroup className="mb-3">
@@ -43,7 +44,6 @@ const Restaurant = () => {
               xs={12}
               md={6}
               lg={4}
-              g={3}
               key={parseInt(meal.idMeal) * Math.random(10)}
             >
               <Meal meal={meal}></Meal>
