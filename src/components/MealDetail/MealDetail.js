@@ -40,7 +40,7 @@ const MealDetail = () => {
     <div>
       <h2>{strMeal}</h2>
       <h4>Tags: {strTags}</h4>
-      <img src={strMealThumb} alt={strMeal} />
+      <img className="img-fluid" src={strMealThumb} alt={strMeal} />
       <p>{strInstructions}</p>
       <br />
       <br />
@@ -49,9 +49,11 @@ const MealDetail = () => {
           Watch Video
         </a>
       </Button>
+      <br />
+      <br />
       <p>
         <small>
-          External Source:{" "}
+          External Source:
           <a href={strSource} target="/blank">
             {strSource}
           </a>

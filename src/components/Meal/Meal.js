@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Meal = (props) => {
   const { idMeal, strMeal, strInstructions, strMealThumb } = props.meal;
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className="m-auto" style={{ width: "18rem" }}>
       <Card.Img variant="top" src={strMealThumb} />
       <Card.Body>
         <Card.Title>{strMeal}</Card.Title>
